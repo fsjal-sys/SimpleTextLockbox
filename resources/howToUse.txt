@@ -1,0 +1,9 @@
+First either enter your own text into the text box on the right or click on the "Open" button. The "Open" button will open up your file explorer. 
+
+Search for the file that you would like to encrypt and click on it. The contents of the file will then be put into the text box.
+
+Then click on the "Encrypt Contents" button. You will be prompted to enter a password. After entering a password, the contents will be encrypted. 
+
+You can then click on the "Save Contents" button to save your file. To decrypt a file, make sure that you have opened a file whose contents have already been encrypted. 
+
+Then click on "Decrypt Contents" button. You will be prompted to enter the password which you have used to encrypt the contents of this file. Enter this password again and the encrypted contents will become decrypted and displayed in the text box.

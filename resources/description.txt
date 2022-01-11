@@ -1,0 +1,7 @@
+This program allows the user to encrypt the contents of any file and then decrypt those contents. A unique key is generated from a password entered by the user. Hence this program effectively allows the user to password protect the text within files.
+
+AES (Advanced Encryption Standard) is implemented using the Python cryptography module.
+
+AES: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+
+Python Cryptography Module: https://pypi.org/project/cryptography/
