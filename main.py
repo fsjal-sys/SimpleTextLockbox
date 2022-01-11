@@ -60,20 +60,23 @@ class SimpleTextLockbox(Ui_MainWindow):
 
     def description(self):
         popup.setWindowTitle("Description")
-        popup.setText("""This program allows the user to encrypt the contents of any file and then decrypt those contents. A unique key is generated from a password entered by the user. Hence this program effectively allows the user to password protect the text within files.\n
-AES (Advanced Encryption Standard) is implemented using the Python cryptography module.\n
-AES: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard\n
-Python Cryptography Module: https://pypi.org/project/cryptography/\n""")
+        with open("resources/description.txt") as f:
+            description = f.read()
+        popup.setText(description)
         popup.exec_()
 
     def attributions(self):
         popup.setWindowTitle("Attributions")
-        popup.setText("Icons made by Freepik from https://www.flaticon.com/\nIcon Author: https://www.flaticon.com/authors/freepik")
+        with open("resources/attributions.txt") as f:
+            attributions = f.read()
+        popup.setText(attributions)
         popup.exec_()
 
     def howToUse(self):
         popup.setWindowTitle("How to Use")
-        popup.setText("""First either enter your own text into the text box on the right or click on the \"Open\" button. The \"Open\" button will open up your file explorer. Search for the file that you would like to encrypt and click on it. The contents of the file will then be put into the text box.\nThen click on the \"Encrypt Contents\" button. You will be prompted to enter a password. After entering a password, the contents will be encrypted. You can then click on the \"Save Contents\" button to save your file.\nTo decrypt a file, make sure that you have opened a file whose contents have already been encrypted. Then click on \"Decrypt Contents\" button. You will be prompted to enter the password which you have used to encrypt the contents of this file. Enter this password again and the encrypted contents will become decrypted and displayed in the text box.\n""")
+        with open("resources/howToUse.txt") as f:
+            howToUse = f.read()
+        popup.setText(howToUse)
         popup.exec_()
 
 app = QtWidgets.QApplication(sys.argv)
