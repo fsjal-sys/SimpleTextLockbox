@@ -18,7 +18,9 @@ def lock(key, plainText):
     IV = os.urandom(12)
     encryptor = Cipher(algorithms.AES(key), modes.GCM(IV)).encryptor()
     cipherText = encryptor.update(plainText) + encryptor.finalize()
-    cipherText = IV + bytes("ᚨ",'utf-8') + encryptor.tag + bytes("ᚨ",'utf-8') + cipherText
+    #cipherText must be finilized before preprending anything, otherwise the plainText will not be encrypted.
+    #hence why there is an additional line for setting the value of cipherText
+    cipherText = IV + bytes("ᚨ",'utf-8') + encryptor.tag + bytes("ᚨ",'utf-8') + cipherText 
     return cipherText
 
 def unlock(key, cipherText):
